@@ -32,6 +32,7 @@ async function handleSubmit(event) {
             message: "You forgot to enter important data",
             position: 'topRight',
             });
+        loadBtn.style.display = "none"; 
         return;
     }
 
@@ -60,8 +61,8 @@ async function handleSubmit(event) {
             return;
         } else {
             createMarkup(data.hits);
-                loadBtn.style.display = "flex";
-                loaderShow();
+            loadBtn.style.display = "flex"; 
+            loaderShow();
         }
         searchForm.reset();
     }
@@ -78,7 +79,7 @@ async function handleSubmit(event) {
         }); 
         loaderShow();
     }
-}    
+}
 
 function loaderShow() {
     loader.classList.add("hidden");    
@@ -90,7 +91,7 @@ function loaderHidden() {
 
 async function loadMore() {
     try {
-        loadBtn.style.display = "flex";
+        loadBtn.style.display = "flex"; 
         if (loadBtn) {    
             page += 1;
         }          
@@ -98,7 +99,7 @@ async function loadMore() {
         const totalHit = data.totalHits;
 
         if (perPage * page >= totalHit) { 
-            loadBtn.style.display = "none";
+            loadBtn.style.display = "none"; 
             loaderShow();
             iziToast.warning({
                     title: 'Warning',
