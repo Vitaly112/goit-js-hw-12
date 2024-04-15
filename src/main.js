@@ -31,7 +31,7 @@ async function handleSubmit(event) {
             messageColor: '#FFFFFF',
             message: "You forgot to enter important data",
             position: 'topRight',
-            });
+        });
         loadBtn.style.display = "none"; 
         return;
     }
