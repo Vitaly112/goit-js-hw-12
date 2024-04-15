@@ -81,6 +81,12 @@ async function handleSubmit(event) {
     }
 }
 
+
+function removeImagesAndHideLoadMore() {
+    list.innerHTML = ''; 
+    loadBtn.style.display = "none";
+}
+
 function loaderShow() {
     loader.classList.add("hidden");    
 }
